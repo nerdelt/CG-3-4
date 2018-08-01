@@ -18,9 +18,10 @@ namespace SimpleCalc
             Console.Write("Please enter the second number: ");
             string secondNumber = Console.ReadLine();
             double second = double.Parse(secondNumber);
+            string zero = (second == 0) ? "):" : ", divide):";
 
             //asks user for calculation method
-            Console.Write("Would you like to add, subtract, multiply, or divide? ");
+            Console.Write($"Please enter an operation (add, subtract, multiply{zero}");
             string operation = Console.ReadLine();
             double answer = 0;
 
@@ -51,7 +52,7 @@ namespace SimpleCalc
 
             else
             {
-                Console.WriteLine("There was a problem. Please enter add, subtract, multiply, or divide.");
+                Console.WriteLine($"There was a problem. Please enter add, subtract, multiply, {zero}.");
 
             }
 
